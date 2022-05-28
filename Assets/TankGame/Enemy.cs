@@ -3,7 +3,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] AnimationCurve speedOverDistance;
+    [SerializeField] AnimationCurve speedOverDistance; 
+
     void Update()
     {
         if (target == null)
@@ -25,7 +26,5 @@ public class Enemy : MonoBehaviour
 
         if (movement.magnitude != 0)
             transform.rotation = Quaternion.LookRotation(movement);
-
-
     }
 }
